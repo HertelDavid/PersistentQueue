@@ -32,7 +32,7 @@ public abstract class AbstractQueueController {
         starter.start();
     }
 
-    synchronized void notifyPersistentThread(){
+    synchronized void  notifyPersistentThread(){
 
         if(persistentQueue.queueThreadCondition()){
             synchronized(queueThreadService.getPersistentQueueRunnable().getMonitor()){
